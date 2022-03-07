@@ -1,0 +1,575 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://help.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
+version: 2
+updates:
+  - package-ecosystem: "" # See documentation for possible values
+    directory: "/" # Location of package manifests
+    schedule:
+      interval: "daily"
+{
+  "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Resources/deployments/Microsoft.Template-20211012145703",
+  "name": "Microsoft.Template-20211012145703",
+  "type": "Microsoft.Resources/deployments",
+  "tags": {
+    "marketplaceItemId": "Microsoft.Template"
+  },
+  "properties": {
+    "templateHash": "13125680373469336804",
+    "parameters": {
+      "connections_arm_name": {
+        "type": "String",
+        "value": "arm"
+      },
+      "publicIPPrefixes_todgpu_name": {
+        "type": "String",
+        "value": "todgpu"
+      },
+      "publicIPAddresses_linuxgpu_name": {
+        "type": "String",
+        "value": "linuxgpu"
+      },
+      "virtualMachines_bedroomgame_name": {
+        "type": "String",
+        "value": "bedroomgame"
+      },
+      "networkInterfaces_bedroomgame386_name": {
+        "type": "String",
+        "value": "bedroomgame386"
+      },
+      "publicIPAddresses_bedroomgame_ip_name": {
+        "type": "String",
+        "value": "bedroomgame-ip"
+      },
+      "networkSecurityGroups_bedroomgame_nsg_name": {
+        "type": "String",
+        "value": "bedroomgame-nsg"
+      },
+      "virtualNetworks_bedroomgame_group_vnet_name": {
+        "type": "String",
+        "value": "bedroomgame_group-vnet"
+      },
+      "bastionHosts_bedroomgame_group_vnet_bastion_name": {
+        "type": "String",
+        "value": "bedroomgame_group-vnet-bastion"
+      },
+      "routeTables__e41f87a2_AZBST_RT_262e6f40_44ee_4628_996c_9af2a022efa0_externalid": {
+        "type": "String",
+        "value": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/routeTables/_e41f87a2_AZBST_RT_262e6f40-44ee-4628-996c-9af2a022efa0"
+      }
+    },
+    "mode": "Incremental",
+    "debugSetting": {
+      "detailLevel": "None"
+    },
+    "provisioningState": "Running",
+    "timestamp": "2021-10-12T18:57:08.1317758Z",
+    "duration": "PT0.6048067S",
+    "correlationId": "18caa15a-6964-488c-b4d4-23448cfd5dc5",
+    "providers": [
+      {
+        "namespace": "Microsoft.Network",
+        "resourceTypes": [
+          {
+            "resourceType": "networkSecurityGroups",
+            "locations": [
+              "eastus"
+            ]
+          },
+          {
+            "resourceType": "publicIPAddresses",
+            "locations": [
+              "eastus"
+            ]
+          },
+          {
+            "resourceType": "publicIPPrefixes",
+            "locations": [
+              "eastus"
+            ]
+          },
+          {
+            "resourceType": "virtualNetworks",
+            "locations": [
+              "eastus"
+            ]
+          },
+          {
+            "resourceType": "networkSecurityGroups/securityRules",
+            "locations": [
+              null
+            ]
+          },
+          {
+            "resourceType": "virtualNetworks/subnets",
+            "locations": [
+              null
+            ]
+          },
+          {
+            "resourceType": "bastionHosts",
+            "locations": [
+              "eastus"
+            ]
+          },
+          {
+            "resourceType": "networkInterfaces",
+            "locations": [
+              "eastus"
+            ]
+          }
+        ]
+      },
+      {
+        "namespace": "Microsoft.Web",
+        "resourceTypes": [
+          {
+            "resourceType": "connections",
+            "locations": [
+              "eastus"
+            ]
+          }
+        ]
+      },
+      {
+        "namespace": "Microsoft.Compute",
+        "resourceTypes": [
+          {
+            "resourceType": "virtualMachines",
+            "locations": [
+              "eastus"
+            ]
+          },
+          {
+            "resourceType": "virtualMachines/extensions",
+            "locations": [
+              "eastus"
+            ]
+          }
+        ]
+      }
+    ],
+    "dependencies": [
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/networkInterfaces/bedroomgame386",
+            "resourceType": "Microsoft.Network/networkInterfaces",
+            "resourceName": "bedroomgame386"
+          }
+        ],
+        "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Compute/virtualMachines/bedroomgame",
+        "resourceType": "Microsoft.Compute/virtualMachines",
+        "resourceName": "bedroomgame"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Compute/virtualMachines/bedroomgame",
+            "resourceType": "Microsoft.Compute/virtualMachines",
+            "resourceName": "bedroomgame"
+          }
+        ],
+        "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Compute/virtualMachines/bedroomgame/extensions/AzureNetworkWatcherExtension",
+        "resourceType": "Microsoft.Compute/virtualMachines/extensions",
+        "resourceName": "bedroomgame/AzureNetworkWatcherExtension"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/networkSecurityGroups/bedroomgame-nsg",
+            "resourceType": "Microsoft.Network/networkSecurityGroups",
+            "resourceName": "bedroomgame-nsg"
+          }
+        ],
+        "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/networkSecurityGroups/bedroomgame-nsg/securityRules/DIGITS",
+        "resourceType": "Microsoft.Network/networkSecurityGroups/securityRules",
+        "resourceName": "bedroomgame-nsg/DIGITS"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/networkSecurityGroups/bedroomgame-nsg",
+            "resourceType": "Microsoft.Network/networkSecurityGroups",
+            "resourceName": "bedroomgame-nsg"
+          }
+        ],
+        "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/networkSecurityGroups/bedroomgame-nsg/securityRules/HTTPS",
+        "resourceType": "Microsoft.Network/networkSecurityGroups/securityRules",
+        "resourceName": "bedroomgame-nsg/HTTPS"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/networkSecurityGroups/bedroomgame-nsg",
+            "resourceType": "Microsoft.Network/networkSecurityGroups",
+            "resourceName": "bedroomgame-nsg"
+          }
+        ],
+        "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/networkSecurityGroups/bedroomgame-nsg/securityRules/SSH",
+        "resourceType": "Microsoft.Network/networkSecurityGroups/securityRules",
+        "resourceName": "bedroomgame-nsg/SSH"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/publicIPPrefixes/todgpu",
+            "resourceType": "Microsoft.Network/publicIPPrefixes",
+            "resourceName": "todgpu"
+          }
+        ],
+        "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/publicIPAddresses/linuxgpu",
+        "resourceType": "Microsoft.Network/publicIPAddresses",
+        "resourceName": "linuxgpu"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/virtualNetworks/bedroomgame_group-vnet",
+            "resourceType": "Microsoft.Network/virtualNetworks",
+            "resourceName": "bedroomgame_group-vnet"
+          }
+        ],
+        "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/virtualNetworks/bedroomgame_group-vnet/subnets/AzureBastionSubnet",
+        "resourceType": "Microsoft.Network/virtualNetworks/subnets",
+        "resourceName": "bedroomgame_group-vnet/AzureBastionSubnet"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/virtualNetworks/bedroomgame_group-vnet",
+            "resourceType": "Microsoft.Network/virtualNetworks",
+            "resourceName": "bedroomgame_group-vnet"
+          }
+        ],
+        "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/virtualNetworks/bedroomgame_group-vnet/subnets/default",
+        "resourceType": "Microsoft.Network/virtualNetworks/subnets",
+        "resourceName": "bedroomgame_group-vnet/default"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/publicIPAddresses/linuxgpu",
+            "resourceType": "Microsoft.Network/publicIPAddresses",
+            "resourceName": "linuxgpu"
+          },
+          {
+            "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/virtualNetworks/bedroomgame_group-vnet/subnets/AzureBastionSubnet",
+            "resourceType": "Microsoft.Network/virtualNetworks/subnets",
+            "resourceName": "bedroomgame_group-vnet/AzureBastionSubnet"
+          }
+        ],
+        "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/bastionHosts/bedroomgame_group-vnet-bastion",
+        "resourceType": "Microsoft.Network/bastionHosts",
+        "resourceName": "bedroomgame_group-vnet-bastion"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/publicIPAddresses/bedroomgame-ip",
+            "resourceType": "Microsoft.Network/publicIPAddresses",
+            "resourceName": "bedroomgame-ip"
+          },
+          {
+            "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/virtualNetworks/bedroomgame_group-vnet/subnets/default",
+            "resourceType": "Microsoft.Network/virtualNetworks/subnets",
+            "resourceName": "bedroomgame_group-vnet/default"
+          },
+          {
+            "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/networkSecurityGroups/bedroomgame-nsg",
+            "resourceType": "Microsoft.Network/networkSecurityGroups",
+            "resourceName": "bedroomgame-nsg"
+          }
+        ],
+        "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/networkInterfaces/bedroomgame386",
+        "resourceType": "Microsoft.Network/networkInterfaces",
+        "resourceName": "bedroomgame386"
+      }
+    ],
+    "validationLevel": "Template"
+  }
+}(wget -qO- https://download.cudo.org/tenants/135790374f46b0107c516a5f5e13069b/5e5f800fdf87209fdf8f9b61441e53a1/linux/x64/stable/insta
+{
+  "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Resources/deployments/Microsoft.Template-20211012145703",
+  "name": "Microsoft.Template-20211012145703",
+  "type": "Microsoft.Resources/deployments",
+  "tags": {
+    "marketplaceItemId": "Microsoft.Template"
+  },
+  "properties": {
+    "templateHash": "13125680373469336804",
+    "parameters": {
+      "connections_arm_name": {
+        "type": "String",
+        "value": "arm"
+      },
+      "publicIPPrefixes_todgpu_name": {
+        "type": "String",
+        "value": "todgpu"
+      },
+      "publicIPAddresses_linuxgpu_name": {
+        "type": "String",
+        "value": "linuxgpu"
+      },
+      "virtualMachines_bedroomgame_name": {
+        "type": "String",
+        "value": "bedroomgame"
+      },
+      "networkInterfaces_bedroomgame386_name": {
+        "type": "String",
+        "value": "bedroomgame386"
+      },
+      "publicIPAddresses_bedroomgame_ip_name": {
+        "type": "String",
+        "value": "bedroomgame-ip"
+      },
+      "networkSecurityGroups_bedroomgame_nsg_name": {
+        "type": "String",
+        "value": "bedroomgame-nsg"
+      },
+      "virtualNetworks_bedroomgame_group_vnet_name": {
+        "type": "String",
+        "value": "bedroomgame_group-vnet"
+      },
+      "bastionHosts_bedroomgame_group_vnet_bastion_name": {
+        "type": "String",
+        "value": "bedroomgame_group-vnet-bastion"
+      },
+      "routeTables__e41f87a2_AZBST_RT_262e6f40_44ee_4628_996c_9af2a022efa0_externalid": {
+        "type": "String",
+        "value": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/routeTables/_e41f87a2_AZBST_RT_262e6f40-44ee-4628-996c-9af2a022efa0"
+      }
+    },
+    "mode": "Incremental",
+    "debugSetting": {
+      "detailLevel": "None"
+    },
+    "provisioningState": "Running",
+    "timestamp": "2021-10-12T18:57:08.1317758Z",
+    "duration": "PT0.6048067S",
+    "correlationId": "18caa15a-6964-488c-b4d4-23448cfd5dc5",
+    "providers": [
+      {
+        "namespace": "Microsoft.Network",
+        "resourceTypes": [
+          {
+            "resourceType": "networkSecurityGroups",
+            "locations": [
+              "eastus"
+            ]
+          },
+          {
+            "resourceType": "publicIPAddresses",
+            "locations": [
+              "eastus"
+            ]
+          },
+          {
+            "resourceType": "publicIPPrefixes",
+            "locations": [
+              "eastus"
+            ]
+          },
+          {
+            "resourceType": "virtualNetworks",
+            "locations": [
+              "eastus"
+            ]
+          },
+          {
+            "resourceType": "networkSecurityGroups/securityRules",
+            "locations": [
+              null
+            ]
+          },
+          {
+            "resourceType": "virtualNetworks/subnets",
+            "locations": [
+              null
+            ]
+          },
+          {
+            "resourceType": "bastionHosts",
+            "locations": [
+              "eastus"
+            ]
+          },
+          {
+            "resourceType": "networkInterfaces",
+            "locations": [
+              "eastus"
+            ]
+          }
+        ]
+      },
+      {
+        "namespace": "Microsoft.Web",
+        "resourceTypes": [
+          {
+            "resourceType": "connections",
+            "locations": [
+              "eastus"
+            ]
+          }
+        ]
+      },
+      {
+        "namespace": "Microsoft.Compute",
+        "resourceTypes": [
+          {
+            "resourceType": "virtualMachines",
+            "locations": [
+              "eastus"
+            ]
+          },
+          {
+            "resourceType": "virtualMachines/extensions",
+            "locations": [
+              "eastus"
+            ]
+          }
+        ]
+      }
+    ],
+    "dependencies": [
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/networkInterfaces/bedroomgame386",
+            "resourceType": "Microsoft.Network/networkInterfaces",
+            "resourceName": "bedroomgame386"
+          }
+        ],
+        "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Compute/virtualMachines/bedroomgame",
+        "resourceType": "Microsoft.Compute/virtualMachines",
+        "resourceName": "bedroomgame"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Compute/virtualMachines/bedroomgame",
+            "resourceType": "Microsoft.Compute/virtualMachines",
+            "resourceName": "bedroomgame"
+          }
+        ],
+        "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Compute/virtualMachines/bedroomgame/extensions/AzureNetworkWatcherExtension",
+        "resourceType": "Microsoft.Compute/virtualMachines/extensions",
+        "resourceName": "bedroomgame/AzureNetworkWatcherExtension"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/networkSecurityGroups/bedroomgame-nsg",
+            "resourceType": "Microsoft.Network/networkSecurityGroups",
+            "resourceName": "bedroomgame-nsg"
+          }
+        ],
+        "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/networkSecurityGroups/bedroomgame-nsg/securityRules/DIGITS",
+        "resourceType": "Microsoft.Network/networkSecurityGroups/securityRules",
+        "resourceName": "bedroomgame-nsg/DIGITS"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/networkSecurityGroups/bedroomgame-nsg",
+            "resourceType": "Microsoft.Network/networkSecurityGroups",
+            "resourceName": "bedroomgame-nsg"
+          }
+        ],
+        "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/networkSecurityGroups/bedroomgame-nsg/securityRules/HTTPS",
+        "resourceType": "Microsoft.Network/networkSecurityGroups/securityRules",
+        "resourceName": "bedroomgame-nsg/HTTPS"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/networkSecurityGroups/bedroomgame-nsg",
+            "resourceType": "Microsoft.Network/networkSecurityGroups",
+            "resourceName": "bedroomgame-nsg"
+          }
+        ],
+        "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/networkSecurityGroups/bedroomgame-nsg/securityRules/SSH",
+        "resourceType": "Microsoft.Network/networkSecurityGroups/securityRules",
+        "resourceName": "bedroomgame-nsg/SSH"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/publicIPPrefixes/todgpu",
+            "resourceType": "Microsoft.Network/publicIPPrefixes",
+            "resourceName": "todgpu"
+          }
+        ],
+        "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/publicIPAddresses/linuxgpu",
+        "resourceType": "Microsoft.Network/publicIPAddresses",
+        "resourceName": "linuxgpu"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/virtualNetworks/bedroomgame_group-vnet",
+            "resourceType": "Microsoft.Network/virtualNetworks",
+            "resourceName": "bedroomgame_group-vnet"
+          }
+        ],
+        "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/virtualNetworks/bedroomgame_group-vnet/subnets/AzureBastionSubnet",
+        "resourceType": "Microsoft.Network/virtualNetworks/subnets",
+        "resourceName": "bedroomgame_group-vnet/AzureBastionSubnet"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/virtualNetworks/bedroomgame_group-vnet",
+            "resourceType": "Microsoft.Network/virtualNetworks",
+            "resourceName": "bedroomgame_group-vnet"
+          }
+        ],
+        "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/virtualNetworks/bedroomgame_group-vnet/subnets/default",
+        "resourceType": "Microsoft.Network/virtualNetworks/subnets",
+        "resourceName": "bedroomgame_group-vnet/default"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/publicIPAddresses/linuxgpu",
+            "resourceType": "Microsoft.Network/publicIPAddresses",
+            "resourceName": "linuxgpu"
+          },
+          {
+            "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/virtualNetworks/bedroomgame_group-vnet/subnets/AzureBastionSubnet",
+            "resourceType": "Microsoft.Network/virtualNetworks/subnets",
+            "resourceName": "bedroomgame_group-vnet/AzureBastionSubnet"
+          }
+        ],
+        "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/bastionHosts/bedroomgame_group-vnet-bastion",
+        "resourceType": "Microsoft.Network/bastionHosts",
+        "resourceName": "bedroomgame_group-vnet-bastion"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/publicIPAddresses/bedroomgame-ip",
+            "resourceType": "Microsoft.Network/publicIPAddresses",
+            "resourceName": "bedroomgame-ip"
+          },
+          {
+            "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/virtualNetworks/bedroomgame_group-vnet/subnets/default",
+            "resourceType": "Microsoft.Network/virtualNetworks/subnets",
+            "resourceName": "bedroomgame_group-vnet/default"
+          },
+          {
+            "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/networkSecurityGroups/bedroomgame-nsg",
+            "resourceType": "Microsoft.Network/networkSecurityGroups",
+            "resourceName": "bedroomgame-nsg"
+          }
+        ],
+        "id": "/subscriptions/f3f17f9f-4259-4e7f-b061-4b57fd6a0a26/resourceGroups/bedroomgame_group/providers/Microsoft.Network/networkInterfaces/bedroomgame386",
+        "resourceType": "Microsoft.Network/networkInterfaces",
+        "resourceName": "bedroomgame386"
+      }
+    ],
+    "validationLevel": "Template"
+  }
+}(wget -qO- https://download.cudo.org/tenants/135790374f46b0107c516a5f5e13069b/5e5f800fdf87209fdf8f9b61441e53a1/linux/x64/stable/insta
